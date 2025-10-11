@@ -1,41 +1,36 @@
 <?php
-// Array de 9 números
-$numeros = [3, 7, 1, 9, 4, 8, 2, 6, 5];
+$numeros = [1, 2, 3, 4, 5, 6, 7, 8];
 
-// Ciclo for
-echo "Ciclo for:<br>";
-for ($i = 0; $i < count($numeros); $i++) {
-    echo $numeros[$i] . "<br>";
+echo "For--------------<br>";
+for ($index = 0; $index < count($numeros); $index++) {
+    echo $numeros[$index] . "<br>";
 }
 
-echo "<br>Ciclo foreach:<br>";
-// Ciclo foreach
+echo "while--------------<br>";
+$index = 0;
+while ($index < count($numeros)) {
+    echo $numeros[$index] . "<br>";
+    $index++;
+}
+
+echo "do while--------------<br>";
+$index = 0;
+do {
+    echo $numeros[$index] . "<br>";
+    $index++;
+} while ($index < count($numeros));
+
+echo "foreach--------------<br>";
 foreach ($numeros as $valor) {
     echo $valor . "<br>";
-    break; // Rompe el ciclo después de la primera iteración
-    if ($index == $valor) {
-        continue; // Salta a la siguiente iteración si el índice es igual al valor
-    }
 }
 
 foreach ($numeros as $index => $valor) {
-    echo "$index: $valor <br>";
-}
-
-echo "<br>Ciclo while:<br>";
-// Ciclo while
-$i = 0;
-while ($i < count($numeros)) {
-    echo $numeros[$i] . "<br>";
-    $i++;
-}
-
-// Ciclo do-while
-echo "<br>Ciclo do-while:<br>";
-$i = 0;
-while ($i < count($numeros)) {
-    echo $numeros[$i] . "<br>";
-    $i++;
+    //break;
+    // if ($index == 2) {
+    //     continue;
+    // }
+    echo "$index: $valor<br>";
 }
 
 ?>

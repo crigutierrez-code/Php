@@ -1,11 +1,14 @@
 <?php
-$numeros = $_POST['numtext'];
+$estado = $_GET["estado"];
+$valor = $_GET["valor"];
+$numero = $_POST['numero'];
 
-$mod = $numeros % 2;
+$mod = $numero % 2;
+echo "Estado: $estado $valor<br>";
 if ($mod == 0) {
-    echo "El número $numeros es par";
+    echo "El numero es par";
 } else {
-    echo "El número $numeros es impar";
+    echo "El numero es impar";
 }
-echo '<br><a href="forms.html"><button>Regresar</button></a>';
+
 ?>

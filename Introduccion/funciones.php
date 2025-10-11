@@ -1,29 +1,28 @@
 <?php
 function saludar($nombre)
 {
-    return "Hola, $nombre!";
+    return "Hola $nombre";
 }
 
-function saludo($nombre): void
+function saludo($nombre = null)
 {
-    echo "Hola, $nombre!";
+    echo "Hola $nombre";
 }
 
-echo saludar(nombre: "Pepe");
-echo "<br>";
-saludo(nombre: "Ana");
-echo "<br>";
+echo saludar("Pepe");
+echo '<br>';
+saludo("Ana");
+echo '<br>';
 saludo();
 
-function sumar(...$valores): int
+function sumar(...$valores)
 {
-
-    $resl = 0;
+    $rstl = 0;
     for ($i = 0; $i < count($valores); $i++) {
-        $resl += $valores[$i];
+        $rstl += $valores[$i];
     }
-    return $resl;
+    return $rstl;
 }
-echo "<br>";
-echo sumar(1, 2, 3, 4, 5);
+echo '<br>';
+echo sumar(1, 2, 3, 4);
 ?>

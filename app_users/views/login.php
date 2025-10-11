@@ -8,7 +8,7 @@
 <body>
     <h1>Iniciar sesion</h1>
     <br>
-    <form action="db/validar-usuario.php" method="post">
+    <form action="operaciones/iniciar-sesion.php" method="post">
         <fieldset>
             <legend>Iniciar sesion</legend>
             <div>

@@ -1,57 +1,38 @@
 <?php
-// ============================
-// VARIABLES ESCALARES
-// ============================
+$nombre = "Ana"; //string
+$apellido = 'Gomez'; //string
+echo $nombre . " " . $apellido . "<br>";
+echo "$nombre $apellido <br>";
+echo '$nombre $apellido <br>';
+$edad = 32; // int
+$promedio = 3.5; //float
+$mayorEdad = true;//false bool
+$ejemplo = null;
 
-// Entero (integer)
-$entero = 10; // Número sin decimales
-echo "Entero: $entero <br>";
+$numeros = array(1, 2, 3, 4, 5, 6);
+$numeros = [1, 2, 3, 4, 5, 6];
+$lista = ["a", 12, 12.3, true, null, []];
+echo $numeros[0] . "" . $numeros[1] . "<br>";
 
-// Flotante (float o double)
-$flotante = 3.14; // Número con decimales
-echo "Flotante: $flotante <br>";
+$persona = [
+    'nombre' => "Juan",
+    "apellido" => 'Perez',
+    "edad" => 25,
+    "numeros" => [2, 4, 6, 8],
+    "jobs" => [
+        "a" => "Job 1",
+        "b" => "Job 2",
+        "c" => "Job 3",
+    ]
+];
+echo $persona["nombre"] . '<br>';
+echo $persona["numeros"][0] . '<br>';
+echo $persona["jobs"]["b"] . '<br>';
 
-// Cadena de texto (string)
-$cadena = "Hola, mundo"; // Texto
-echo "Cadena: $cadena <br>";
+define('TITULO', 'Hola php');
+echo TITULO . '<br>';
 
-// Booleano (true o false)
-$booleano = true; // Verdadero o falso
-echo "Booleano: " . ($booleano ? "true" : "false") . "<br>";
+const SUB_TITULO = 'Sub titulo';
+echo SUB_TITULO . '<br>';
 
-
-// ============================
-// VARIABLES COMPUESTAS
-// ============================
-
-// Array indexado (se accede por índices numéricos)
-$array = [1, 2, 3];
-echo "Array indexado: " . implode(", ", $array) . "<br>";
-
-// Array asociativo (se accede por claves)
-$asociativo = ["a" => 1, "b" => 2];
-echo "Array asociativo: a = {$asociativo['a']}, b = {$asociativo['b']} <br>";
-
-// Objeto (instancia de una clase anónima)
-$objeto = (object) ['x' => 1, 'y' => 2];
-echo "Objeto: x = {$objeto->x}, y = {$objeto->y} <br>";
-
-
-// ============================
-// VARIABLES ESPECIALES
-// ============================
-
-// NULL (ausencia de valor)
-$nulo = null;
-echo "Nulo: " . var_export($nulo, true) . "<br>";
-
-// Resource (un recurso externo, como un archivo o conexión a BD)
-$recurso = fopen(__FILE__, "r"); // Abrimos este mismo archivo en modo lectura
-echo "Recurso: " . get_resource_type($recurso) . "<br>";
-fclose($recurso); // Siempre cerrar el recurso
-
-// ============================
-// EXTRA: VAR_DUMP PARA VER TIPO Y VALOR
-// ============================
-echo "<h3>Detalle con var_dump:</h3>";
-var_dump($entero, $flotante, $cadena, $booleano, $array, $asociativo, $objeto, $nulo);
+?>

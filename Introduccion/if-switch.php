@@ -1,30 +1,26 @@
 <?php
 $edad = 20;
 
-if ($edad < 18) {
+if ($edad < 17) {
     echo "Menor de edad";
-} elseif ($edad >= 18 && $edad < 65) {
-    echo "Adulto";
+} else if ($edad < 20) {
+    echo "menor a 20";
+} elseif ($edad < 25) {
+    echo "menor a 25";
 } else {
-    echo "Persona mayor";
+    echo "mayor de edad";
 }
 
-
-$categoria = 'a';
+$categoria = "a";
 switch ($categoria) {
-    case 'a':
-        echo "Categoría A";
+    case "a":
+        //codigo...
         break;
-    case 'b':
-        echo "Categoría B";
-        break;
-    case 'c':
-        echo "Categoría C";
+    case "b":
+        //codigo
         break;
     default:
-        echo "Categoría desconocida";
+        //codigo
         break;
 }
-
-
 ?>
